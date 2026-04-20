@@ -1,0 +1,11 @@
+name: q-ai-tools-blink
+description: >
+  OAuth-gated remote MCP server on an Arduino UNO Q. Exposes the four onboard
+  RGB LEDs and the 8x12 LED matrix (including a text marquee) as tools any
+  OAuth 2.1 + PKCE-capable MCP client can consume. Client-agnostic — works
+  with any MCP client that speaks the standard streamable-HTTP transport.
+icon: 🔌
+version: "0.1.0"
+ports:
+  - 7000
+bricks: []
