@@ -40,7 +40,7 @@ No Dex, no Caddy, no Docker compose. The app **is** the auth server — one cont
 Run on the UNO Q:
 
 ```bash
-git clone <this-repo-url> ~/q-ai-tools-blink
+git clone https://github.com/Volt23/uno-q-mcp-blink-ai.git ~/q-ai-tools-blink
 cd ~/q-ai-tools-blink
 ./setup.sh
 ```
@@ -134,20 +134,22 @@ Your MCP endpoint becomes `https://<hostname>.<tailnet>.ts.net/blink`.
 ## Repo layout
 
 ```
-q-ai-tools-blink/
+uno-q-mcp-blink-ai/
 ├── README.md
 ├── setup.sh              # interactive bootstrap — run this first
 ├── app.yaml              # App Lab metadata
 ├── sketch/
 │   ├── sketch.ino        # MCU: LED3/4 + matrix RPC providers
 │   └── sketch.yaml       # sketch build profile + libraries
-└── python/
-    ├── main.py           # FastAPI + FastMCP entry point
-    ├── auth.py           # OAuth 2.1 server + JWT middleware (all-in-one)
-    ├── hardware.py       # MCU msgpack RPC + MPU LED sysfs glue
-    ├── marquee.py        # text → 8×12 scrolling frame sequence
-    ├── font.py           # 3×6 bitmap font
-    └── requirements.txt
+├── python/
+│   ├── main.py           # FastAPI + FastMCP entry point
+│   ├── auth.py           # OAuth 2.1 server + JWT middleware (all-in-one)
+│   ├── hardware.py       # MCU msgpack RPC + MPU LED sysfs glue
+│   ├── marquee.py        # text → 8×12 scrolling frame sequence
+│   ├── font.py           # 3×6 bitmap font
+│   └── requirements.txt
+└── skill/
+    └── mcp-tools.md      # tool usage guide for AI agents and MCP clients
 ```
 
 ## Troubleshooting
